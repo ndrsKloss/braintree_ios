@@ -66,9 +66,6 @@ import BraintreeCore
 
     /// Optional: Provides details to users about their recurring billing amount when using PayPal Checkout with Purchase.
     public var amountBreakdown: BTAmountBreakdown?
-    
-    /// Optional: Offers PayPal Credit if the customer qualifies. Defaults to `false`. Only available with PayPal Checkout.
-    public var shouldOfferCredit: Bool = false
 
     // MARK: - Initializers
     
@@ -157,7 +154,8 @@ import BraintreeCore
             userAuthenticationEmail: userAuthenticationEmail,
             recurringBillingDetails: recurringBillingDetails,
             recurringBillingPlanType: recurringBillingPlanType,
-            userAction: userAction
+            userAction: userAction,
+            shouldOfferCredit: shouldOfferCredit
         )
     }
 
